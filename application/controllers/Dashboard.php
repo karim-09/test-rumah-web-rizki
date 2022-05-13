@@ -196,11 +196,10 @@ class Dashboard extends MY_Admin
 		    	$dataList["records"][$cekUser] = $dataSave;
 		    	$dataList["records"] = array_values($dataList["records"]);
 			    file_put_contents("user.json", json_encode($dataList));
-			    echo json_encode(array('status' => true, 'msg' => 'Data berhasil disimpan'));
 		    }
-	    }else{
-            echo json_encode(array('status' => false, 'msg' => 'Terjadi kesalahan, silahkan coba lagi'));
 	    }
+	    
+	    echo json_encode(array('status' => true, 'msg' => 'Data berhasil disimpan'));
 	}
 
     public function delete()
@@ -208,8 +207,8 @@ class Dashboard extends MY_Admin
         $id = $this->input->post('id',TRUE);
         $delete_dummyapi = $this->restclient->regApi('delete','user/'.$id);
 	    if(isset($delete_dummyapi['error'])){
-	    	if(isset($delete_dummyapi['email'])){
-	            echo json_encode(array('status' => false, 'msg' => $delete_dummyapi['email']));
+	    	if(isset($delete_dummyapi['error'])){
+	            echo json_encode(array('status' => false, 'msg' => $delete_dummyapi['error']));
 	            exit();
 	    	}else{
 	            echo json_encode(array('status' => false, 'msg' => 'Terjadi kesalahan, silahkan coba lagi'));
@@ -225,9 +224,7 @@ class Dashboard extends MY_Admin
 	    	unset($dataList["records"][$cekUser]);
 	    	$dataList["records"] = array_values($dataList["records"]);
 		    file_put_contents("user.json", json_encode($dataList));
-	        echo json_encode(array('status' => true, 'msg' => 'Data berhasil dihapus.'));
-	    }else{
-            echo json_encode(array('status' => false, 'msg' => 'Terjadi kesalahan, silahkan coba lagi'));
 	    }
+        echo json_encode(array('status' => true, 'msg' => 'Data berhasil dihapus.'));
     }
 }

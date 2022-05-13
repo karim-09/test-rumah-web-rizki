@@ -1,0 +1,134 @@
+@font-face {
+	font-family: "Libre";
+	src: url("assets/fonts/Libre_Barcode_128/Libre_Barcode_128.tff");
+}
+
+.barcode {
+	font-family: 'Libre Barcode 128', cursive;
+}
+
+/* Css barang */
+
+.font-harga {
+	padding-top: 5px;
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.font-penjualan {
+	font-weight: lighter;
+	font-size: 14px;
+}
+
+.font-stok {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+}
+
+.font-rincian {
+	color: #a2a2a2;
+}
+
+/* css nav */
+.navbar-primary {
+	background-color: #88D8C7;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+	background-color: #88D8C7;
+}
+
+
+/* css pengiriman */
+
+.bg-title {
+	background-color: #f7f7f7;
+	padding: 10px;
+}
+
+.border-primary {
+	border-color: #88D8C7 !important;
+}
+
+.my-box {
+	margin: 20px 0;
+}
+
+
+/* css bootstrap custom */
+.btn-primary:hover {
+	background-color: #88D8C7;
+	border-color: white;
+}
+
+.btn-primary {
+	background-color: #88D8C7;
+	border-color: #88D8C7;
+}
+
+.btn-primary:disabled {
+	background-color: #88D8C7;
+	border-color: white;
+}
+
+.btn-outline-primary {
+	color: #88D8C7;
+	border-color: #88D8C7;
+}
+
+.btn-danger {
+	background-color: #e50000;
+}
+
+a {
+	color: #88D8C7;
+}
+
+.select2-container .select2-choice,
+.select2-result-label {
+	font-size: 1.5em;
+	height: 41px;
+	overflow: auto;
+}
+
+.select2-arrow,
+.select2-chosen {
+	padding-top: 6px;
+}
+
+/* add produk */
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+
+	color: #88D8C7;
+}
+
+#submit_add_produk {
+	width: 200px;
+}
+
+/* upload image */
+
+#file-input {
+	display: none;
+}
+
+.box {
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+}
+
+/* chat */
+
+.chat-time {
+	color: silver;
+	font-size: 14px;
+}
+
+/* css dashboard */
+
+.bg-topbox {
+	background-color: red;
+}
